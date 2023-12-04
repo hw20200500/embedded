@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슈팅 게임</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="bottom">
+        <div id="score">스코어: 0</div>
+        <div id="round">라운드: 1</div>
+
+    </div>
+
+    <!-- 추가: 음원을 재생할 Audio 요소 추가 -->
+    <audio id="backgroundAudio" loop>
+        <source src="backgroundMusic.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script src="js/shooting.js"></script>
+    
+</body>
+</html>

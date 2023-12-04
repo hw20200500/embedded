@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    /* background-image: url('background_final.jpeg'); */
+    background-color: black;
+}
+
+#score, #round {
+    color: #282828;
+    display: inline-block; /* 인라인 블록 요소로 배치 */
+    margin: 10px; /* 간격 추가 */
+    padding: 10px; /* 안쪽 여백 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    background-color: rgba(255, 255, 255, 0.937); /* 투명도가 있는 배경색 */
+}
+
+#bottom {
+    padding: 10px;
+    background-color: #ffb265f6;
+}
