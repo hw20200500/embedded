@@ -1,3 +1,4 @@
+
 class Tetris {
     constructor() {
         // 게임 영역의 너비와 높이

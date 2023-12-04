@@ -2,8 +2,8 @@ const canvas = document.getElementById("Canvas");
 const ctx = canvas.getContext("2d");
 const background = new Image();
 const text_img = new Image();
-background.src = '_7b422bb2-f556-45c8-b320-e38845ad743f.jpeg'; // 배경 이미지 파일 경로를 설정해야 합니다
-text_img.src = 'youlose.png';
+background.src = 'asset/_7b422bb2-f556-45c8-b320-e38845ad743f.jpeg'; // 배경 이미지 파일 경로를 설정해야 합니다
+text_img.src = 'asset/youlose.png';
 
 window.addEventListener('resize', adjustCanvasSize);
 
