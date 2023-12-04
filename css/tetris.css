@@ -2,15 +2,29 @@ html {
     touch-action: manipulation;
 }
 
+body {
+    margin: 0;
+    overflow: hidden; /* 배경 이미지가 캔버스를 가리지 않도록 합니다. */
+  }
+
 .wrapper-container {
     display: inline-block;
 }
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 캔버스 위에 배치하기 위해 z-index를 설정합니다. */
+  }
 
 .tetris-container {
     display: flex;
     flex-direction: row;
     margin: 10px;
-    background-color: #333333;
+    background-color: #ffffff;
 }
 
 .tetris-panel-container {
@@ -18,8 +32,8 @@ html {
     padding-left: 10px;
     padding-right: 10px;
     flex-direction: column;
-    color: white;
-    background-color: #333333;
+    /* color: white; */
+    background-color: #ffffff;
 }
 
 .tetris-panel-container-padding {
@@ -40,5 +54,5 @@ html {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    background: #444444;
+    background: #ababab;
 }
