@@ -23,7 +23,7 @@ function adjustCanvasSize() {
 
 // 배경 설정
 const background = new Image();
-background.src = 'asset/_7b422bb2-f556-45c8-b320-e38845ad743f.jpeg'; // 배경 이미지 파일 경로를 설정해야 합니다
+background.src = 'asset/shooting_background.png'; // 배경 이미지 파일 경로를 설정해야 합니다
 
 // 배경 그리기
 function drawBackground() {

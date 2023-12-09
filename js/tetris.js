@@ -1,4 +1,5 @@
 
+
 class Tetris {
     constructor() {
         // 게임 영역의 너비와 높이
@@ -8,6 +9,7 @@ class Tetris {
         // 게임 캔버스와 다음 블록을 표시하는 캔버스
         this.stageCanvas = document.getElementById("stage");
         this.nextCanvas = document.getElementById("next");
+        this.tetris_container = document.getElementById("tetris-container");
         
         // 각 셀의 크기 계산
         let cellWidth = this.stageCanvas.width / this.stageWidth;
@@ -18,11 +20,11 @@ class Tetris {
         this.stageLeftPadding = (this.stageCanvas.width - this.cellSize * this.stageWidth) / 2;
         this.stageTopPadding = (this.stageCanvas.height - this.cellSize * this.stageHeight) / 2;
         
-        // stageCanvas의 위치를 디바이스 화면의 정중앙에 설정
-        this.stageCanvas.style.position = "absolute";
-        this.stageCanvas.style.left = "50%";
-        this.stageCanvas.style.top = "50%";
-        this.stageCanvas.style.transform = "translate(-50%, -50%)";
+        // // stageCanvas의 위치를 디바이스 화면의 정중앙에 설정
+        // this.stageCanvas.style.position = "absolute";
+        // this.stageCanvas.style.left = "50%";
+        // this.stageCanvas.style.top = "50%";
+        // this.stageCanvas.style.transform = "translate(-50%, -50%)";
         
         // 블록의 종류와 스타일
         this.blocks = this.createBlocks();
@@ -203,6 +205,7 @@ class Tetris {
         setTimeout(this.mainLoop.bind(this), 500);
     }
 
+    
     // 새로운 블록 생성
     createNewBlock() {
         this.currentBlock = this.nextBlock;
@@ -212,8 +215,8 @@ class Tetris {
         this.blockAngle = 0;
         this.drawNextBlock();
         if (!this.checkBlockMove(this.blockX, this.blockY, this.currentBlock, this.blockAngle)) {
-            let messageElem = document.getElementById("message");
-            messageElem.innerText = "GAME OVER";
+            window.location.href = 'game_over_tetris.html';
+            
             return false;
         }
         return true;
@@ -362,7 +365,7 @@ class Tetris {
     // 캔버스 초기화
     clear(canvas) {
         let context = canvas.getContext("2d");
-        context.fillStyle = "rgb(0, 0, 0)";
+        context.fillStyle = "rgb(184, 233, 255)";
         context.fillRect(0, 0, canvas.width, canvas.height);
     }
 }

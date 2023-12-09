@@ -2,15 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>블럭게임</title>
+    <title>테트리스</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/tetris.css">
     <script type="text/javascript" src="js/tetris.js"></script>
   </head>
   <body>
     <div class="wrapper-container">
-      <img src="asset/_7b422bb2-f556-45c8-b320-e38845ad743f.jpeg" alt="Background Image" class="background-image">
+      <img src="asset/tetris_background.png" alt="Background Image" class="background-image">
         <span class="tetris-container">
+          <!-- 게임 오버 메시지 -->
+            <div id="message" class="hidden">
+              <img src="asset/gameover_b.png" alt="Game Over">
+            </div>
             <canvas id="stage" width="350px" height="700px">
             </canvas>
             <span class="tetris-panel-container">
@@ -33,8 +37,10 @@
                 </tr>
               </table>
             </span>
+            
         </span>
     </div>
+    
     <script>
       var tetris = new Tetris();
       tetris.startGame();

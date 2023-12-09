@@ -2,8 +2,8 @@ const canvas = document.getElementById("Canvas");
 const ctx = canvas.getContext("2d");
 const background = new Image();
 const text_img = new Image();
-background.src = 'asset/shooting_background.png'; // 배경 이미지 파일 경로를 설정해야 합니다
-text_img.src = 'asset/gameover_w.png';
+background.src = 'asset/tetris_background.png'; // 배경 이미지 파일 경로를 설정해야 합니다
+text_img.src = 'asset/gameover_b.png';
 
 window.addEventListener('resize', adjustCanvasSize);
 

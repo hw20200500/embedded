@@ -4,7 +4,11 @@ html {
 
 body {
     margin: 0;
-    overflow: hidden; /* 배경 이미지가 캔버스를 가리지 않도록 합니다. */
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
   }
 
 .wrapper-container {
@@ -23,8 +27,15 @@ body {
 .tetris-container {
     display: flex;
     flex-direction: row;
+    padding: 10px; /* 안쪽 여백 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    justify-content: center; /* 수직 중앙 정렬 */
     margin: 10px;
     background-color: #ffffff;
+}
+
+#stage {
+    background-color: #fffcbe;
 }
 
 .tetris-panel-container {
@@ -32,6 +43,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     flex-direction: column;
+    
     /* color: white; */
     background-color: #ffffff;
 }
@@ -55,4 +67,15 @@ body {
     padding-bottom: 10px;
     text-align: center;
     background: #ababab;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
