@@ -40,8 +40,10 @@ class Tetris {
                 this.rotate();
             } else if (e.keyCode === 39) {
                 this.moveRight();
-            } else if (e.keyCode === 40) {
+            } else if (e.keyCode === 32) {
                 this.fall();
+            } else if (e.keyCode === 13) {
+                window.location.href = 'game_over_tetris.html';
             }
         }
 
@@ -356,6 +358,7 @@ class Tetris {
     // 스테이지 새로고침
     refreshStage() {
       this.clear(this.stageCanvas);
+      backgroundAudio.play();
       this.drawStage();
       this.drawBlock(this.stageLeftPadding + this.blockX * this.cellSize,
                 this.stageTopPadding + this.blockY * this.cellSize,

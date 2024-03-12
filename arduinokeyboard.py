@@ -20,9 +20,9 @@ while True:
             keyboard.press(Key.enter)
             keyboard.release(Key.enter)
         elif data == 'D':
-            keyboard.press('d')
-            keyboard.release('d')
-        elif data == 'F':
+            keyboard.press(Key.f5)
+            keyboard.release(Key.f5)
+        elif data == 'F' :
             keyboard.press('f')
             keyboard.release('f')
         elif data == 'LEFT':
